@@ -1,0 +1,24 @@
+[
+    {
+    "img": "../assets/images/business.jpg",
+    "alt": "Leano and Cruz, CPAs Business Services",
+    "title": "Business Services",
+    "text": "Many business owners depend on accurate, insightful financial information to manage their day-to-day operations, capitalize on opportunities, and sustain profitability.  Many sole proprietors, corporation or partnerships seek assistance in preparing, recording, summarizing, and reporting the financial activities of their businesses.",
+    "link":"/business"
+    },
+
+    {
+        "img": "../assets/images/taxes.jpg",
+        "alt": "Leano and Cruz, CPAs Tax Services",
+        "title": "Tax Services",
+        "text": "Our tax services include corporate (C and S Corporations), limited liability corporation (LLC), partnership, and individual tax return preparation.  Throughout the year, we work proactively towards tax planning opportunities and make ourselves available to meet the various needs of our clients.",
+        "link":"/taxes"
+    },
+    {
+        "img": "../assets/images/compliance.jpg",
+        "alt": "Leano and Cruz, CPAs Tax Compliance Services",
+        "title": "Tax Compliance Services",
+        "text": "Our tax compliance services cover the other filing requirements of the State of California.  We can assist in the preparation and filing of the quarterly sales tax return, annual or biennial Statement of Information with the CA Secretary of State, and City business license application/renewal.",
+        "link":"/compliance"
+    }
+]

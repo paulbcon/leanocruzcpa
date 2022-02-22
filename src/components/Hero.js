@@ -1,13 +1,63 @@
 import React from "react"
 import styled from "styled-components"
-import { Button } from "./Button"
+import Link from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Video from "../assets/videos/1.mp4"
-import BusinessImage from "../assets/images/business.jpg"
-import ComplianceImage from "../assets/images/compliance.jpg"
-import TaxImage from "../assets/images/taxes.jpg"
-import { CardGroup, Card } from "react-bootstrap"
+import { CardGroup, Card, Button } from "react-bootstrap"
+import { useStaticQuery, graphql } from "gatsby"
+
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+  query ServicesQuery {
+    allServicesJson {
+    edges {
+      node {
+        text
+        title
+        id
+        img {
+          id
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
+        alt
+        link
+      }
+    }
+  }
+}
+
+  `)
+
+function getServices(data) {
+  const servicesArray = []
+  data.allServicesJson.edges.forEach((item, i) => {
+    servicesArray.push(
+      <Card className="card" key={i}>
+              <Card.Img variant="top" src={item.node.img.childImageSharp.fluid.src}
+                alt={item.node.alt} />
+              <Card.Body>
+                <Card.Title><h2>{item.node.title}</h2></Card.Title>
+                <Card.Text>
+                {item.node.text}
+                </Card.Text>
+              </Card.Body>
+              
+                <AniLink paintDrip to={item.node.link} hex="#0d1f02">
+                  Read More...
+                </AniLink>
+              
+               
+        </Card>
+    )
+  })
+  return servicesArray
+}
+
   return (
     <HeroContainer>
       <HeroBg>
@@ -22,48 +72,7 @@ const Hero = () => {
           </HeroP>
           
           <CardGroup>
-            <Card className="card">
-              <Card.Img variant="top" src={BusinessImage} />
-              <Card.Body>
-                <Card.Title><h2>Business Services</h2></Card.Title>
-                <Card.Text>
-                <h5>This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.</h5>
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-              <small className="text-muted">Read More...</small>
-              </Card.Footer>
-            </Card>
-            <Card className="card">
-              <Card.Img variant="top" src={TaxImage} />
-              <Card.Body>
-                <Card.Title><h2>Tax Services</h2></Card.Title>
-                <Card.Text>
-                <h5>This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.</h5>
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Read More...</small>
-              </Card.Footer>
-            </Card>
-            <Card className="card">
-              <Card.Img variant="top" src={ComplianceImage} />
-              <Card.Body>
-                <Card.Title><h2>Tax Compliance Services</h2></Card.Title>
-                <Card.Text>
-                  <h5>This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.</h5>
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Read More...</small>
-              </Card.Footer>
-            </Card>
+            {getServices(data)}
           </CardGroup>
         </HeroItems>
       </HeroContent>
@@ -146,3 +155,16 @@ const HeroP = styled.p`
   font-size: clamp(1rem, 2vw, 2rem);
   margin-bottom: 2rem;
 `
+const NavLink = styled(Link)`
+  color:white;
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor:pointer;
+  &:hover {
+    color:yellow;
+  }
+`
+
