@@ -42,7 +42,7 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
-  color:#008644;
+  color:#fff;
   text-shadow: 0px 2px 2px #222;
   font-size:1.2rem;
   font-weight:bolder;

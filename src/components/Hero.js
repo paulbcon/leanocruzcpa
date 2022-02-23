@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Link from 'gatsby-plugin-transition-link'
 import Video from "../assets/videos/1.mp4"
 import "@fontsource/eb-garamond"
+import Typewriter from "typewriter-effect"
 
 const Hero = () => {
   
@@ -19,14 +20,29 @@ const Hero = () => {
             data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
             data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
           >
-            Leano and Cruz, CPAs</HeroH1>
+            Leano and Cruz, CPAs
+          </HeroH1>
+          
+          <HeroH2>
+          <Typewriter
+             onInit={(typewriter) => {
+               typewriter
+               .typeString('<strong><span style="color:#27ae60; text-shadow: 0px 1px 1px #fff;">Tax</span></strong> Services')
+               .pauseFor(1000)
+               .deleteChars(8)
+               .typeString('and <span style="color:#27ae60; text-shadow: 0px 1px 1px #fff;">Accounting</span> Services')
+               .start();
+             }}  
+          />
+          </HeroH2>
+                   
           <HeroP
             data-sal="slide-down"
             data-sal-duration="2000" // changes duration of the animation (from 200 to 2000 ms)
             data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
             data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
           >
-            When it comes to managing the opportunities, various risks, and
+            Grow your business with us. When it comes to managing the opportunities, various risks, and
             different situations regarding your business, we are here to help.
           </HeroP>
          </HeroItems>
@@ -109,11 +125,17 @@ const HeroH1 = styled.h1`
   color: #fff;
 	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 	letter-spacing: 5px;
-  font-family:"EB Garamond";
+  font-family:"EB Garamond !important";
+`
+const HeroH2 = styled.h2`
+  font-size:clamp(1.2rem,3vw, 2.2rem);
+  letter-spacing:2px;
+  font-family:"EB Garamond !important";
+  font-style:italic;
 `
 const HeroP = styled.p`
-  font-size: clamp(1rem, 2vw, 2rem);
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 1vw, 1.7rem);
+  margin-bottom: 1.5rem;
 `
 const NavLink = styled(Link)`
   color:white;
