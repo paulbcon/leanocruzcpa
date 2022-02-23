@@ -4,12 +4,12 @@ import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
 import { menuData } from '../data/MenuData'
 import { Button } from "./Button"
-
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">Leano and Cruz, CPAs</NavLink>
+      <Link to="/"><StaticImage src="../assets/images/logo2.png" width={200} height={200} /></Link>
       <Bars />
       <NavMenu>
         {menuData.map((item,index) => (
@@ -42,13 +42,20 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
-  color:#fff;
+  color:#008644;
+  text-shadow: 0px 2px 2px #222;
+  font-size:1.2rem;
+  font-weight:bolder;
+	
   display:flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor:pointer;
+  &:hover {
+    color:goldenrod;
+  }
 `
 const Bars = styled(FaBars)`
   display:none;

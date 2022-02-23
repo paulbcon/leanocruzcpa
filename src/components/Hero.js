@@ -1,63 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import Link from 'gatsby-plugin-transition-link'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Video from "../assets/videos/1.mp4"
-import { CardGroup, Card, Button } from "react-bootstrap"
-import { useStaticQuery, graphql } from "gatsby"
-
+import "@fontsource/eb-garamond"
 
 const Hero = () => {
-  const data = useStaticQuery(graphql`
-  query ServicesQuery {
-    allServicesJson {
-    edges {
-      node {
-        text
-        title
-        id
-        img {
-          id
-          childImageSharp {
-            fluid {
-              src
-            }
-          }
-        }
-        alt
-        link
-      }
-    }
-  }
-}
-
-  `)
-
-function getServices(data) {
-  const servicesArray = []
-  data.allServicesJson.edges.forEach((item, i) => {
-    servicesArray.push(
-      <Card className="card" key={i}>
-              <Card.Img variant="top" src={item.node.img.childImageSharp.fluid.src}
-                alt={item.node.alt} />
-              <Card.Body>
-                <Card.Title><h2>{item.node.title}</h2></Card.Title>
-                <Card.Text>
-                {item.node.text}
-                </Card.Text>
-              </Card.Body>
-              
-                <AniLink paintDrip to={item.node.link} hex="#0d1f02">
-                  Read More...
-                </AniLink>
-              
-               
-        </Card>
-    )
-  })
-  return servicesArray
-}
-
+  
   return (
     <HeroContainer>
       <HeroBg>
@@ -65,16 +13,23 @@ function getServices(data) {
       </HeroBg>
       <HeroContent>
         <HeroItems>
-          <HeroH1>Grow your business with us.</HeroH1>
-          <HeroP>
+          <HeroH1
+            data-sal="zoom-in"
+            data-sal-duration="2000" // changes duration of the animation (from 200 to 2000 ms)
+            data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
+            data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
+          >
+            Leano and Cruz, CPAs</HeroH1>
+          <HeroP
+            data-sal="slide-down"
+            data-sal-duration="2000" // changes duration of the animation (from 200 to 2000 ms)
+            data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
+            data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
+          >
             When it comes to managing the opportunities, various risks, and
             different situations regarding your business, we are here to help.
           </HeroP>
-          
-          <CardGroup>
-            {getServices(data)}
-          </CardGroup>
-        </HeroItems>
+         </HeroItems>
       </HeroContent>
     </HeroContainer>
   )
@@ -150,6 +105,11 @@ const HeroH1 = styled.h1`
   margin-bottom: 1.5rem;
   letter-spacing: 3px;
   padding: 0 1rem;
+  /* Darker text on medium background */
+  color: #fff;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	letter-spacing: 5px;
+  font-family:"EB Garamond";
 `
 const HeroP = styled.p`
   font-size: clamp(1rem, 2vw, 2rem);
