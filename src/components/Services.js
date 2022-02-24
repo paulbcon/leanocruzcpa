@@ -59,11 +59,11 @@ function getServices(data) {
   return (
     <ServicesContainer>
       <ServicesHeading>Services</ServicesHeading>
-        
+        <ServicesContent>
           <CardGroup>
                   {getServices(data)}
           </CardGroup>
-        
+        </ServicesContent>        
     </ServicesContainer>
   )
 }
@@ -85,3 +85,8 @@ const ServicesHeading = styled.div`
    font-weight:bolder;
 `
 
+const ServicesContent = styled.div`
+  width:100%;
+  display:flex;
+  justify-content:center;
+`
