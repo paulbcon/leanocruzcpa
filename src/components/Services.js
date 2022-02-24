@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 const Services = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
   query ServicesQuery {
     allServicesJson {
     edges {
