@@ -1,5 +1,4 @@
 import * as React from "react"
-import Link from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Layout from "../components/layout"

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Link from 'gatsby-plugin-transition-link'
 import Video from "../assets/videos/1.mp4"
 import "@fontsource/eb-garamond"
 import Typewriter from "typewriter-effect"
@@ -137,7 +136,7 @@ const HeroP = styled.p`
   font-size: clamp(1rem, 1vw, 1.7rem);
   margin-bottom: 1.5rem;
 `
-const NavLink = styled(Link)`
+/* const NavLink = styled(Link)`
   color:white;
   display:flex;
   align-items: center;
@@ -148,5 +147,5 @@ const NavLink = styled(Link)`
   &:hover {
     color:yellow;
   }
-`
+` */
 
