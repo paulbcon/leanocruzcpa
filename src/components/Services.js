@@ -4,7 +4,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { CardGroup, Card } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
-import { clamp } from 'gsap/all';
 
 const Services = () => {
     const data = useStaticQuery(graphql`

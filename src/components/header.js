@@ -1,5 +1,6 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React, {useState, useEffect } from "react"
+import Link from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import styled from "styled-components"
 import { FaBars } from 'react-icons/fa'
 import { menuData } from '../data/MenuData'
@@ -7,16 +8,37 @@ import { Button } from "./Button"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
+  const [navbar,setNavbar] = useState(false)
+
+  useEffect(() => {
+    if(window.location.pathname)
+    {
+      setNavbar(window.location.pathname)
+    }
+  },[])
   return (
-    <Nav>
+    <Nav navbar={navbar}>
       <Link to="/"><StaticImage src="../assets/images/logo2.png" width={200} height={200} /></Link>
       <Bars />
       <NavMenu>
-        {menuData.map((item,index) => (
+        {menuData.map((item,index) => {
+          return (item.link !== "/" ?
           <NavLink to={item.link} key={index}>
             {item.title}
-          </NavLink>
-        ))}
+            </NavLink>
+          
+          : 
+          <AniLink swipe direction="left" to={item.link} key={index}>
+          {item.title}
+          </AniLink>  
+          )
+        }
+         
+                  
+                  
+        
+        
+        )}
       </NavMenu>
       <NavBtn>
         <Button
@@ -32,7 +54,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background:transparent;
+  background:${({navbar}) => (navbar !== "/" ? "#fff": "transparent" )};
   height: 80px;
   display:flex;
   justify-content:space-between;
@@ -42,7 +64,7 @@ const Nav = styled.nav`
 `
 
 const NavLink = styled(Link)`
-  color:#fff;
+  color:${({navbar}) => (navbar !== "/" ? "#008644": "#fff" )};
   text-shadow: 0px 2px 2px #222;
   font-size:1.2rem;
   font-weight:bolder;
