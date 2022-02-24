@@ -18,7 +18,7 @@ const Header = () => {
   },[])
   return (
     <Nav navbar={navbar}>
-      <Link to="/"><StaticImage src="../assets/images/logo2.png" width={200} height={200} /></Link>
+      <Link to="/"><StaticImage src="../assets/images/logo2.png" width={100} height={100} /></Link>
       <Bars />
       <NavMenu>
         {menuData.map((item,index) => {
