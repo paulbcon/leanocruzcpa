@@ -27,6 +27,7 @@ module.exports = {
           exitEventName: 'sal:out', // Exit event name
       }
     },
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
