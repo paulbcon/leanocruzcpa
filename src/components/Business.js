@@ -1,14 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import styled from 'styled-components'
+import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents';
 
 const Business = () => {
 
   return (
-    <Container>
-      <Heading>Business Services</Heading>
-      <Content>
+    <StyledContainer>
+      <StyledHeading>Business Services</StyledHeading>
+      <StyledContent>
       <h4>Outsourced Accounting/Write-up Services</h4>
         <p>
         Many business owners depend on accurate, insightful financial information to manage their day-to-day operations, capitalize on opportunities, and sustain profitability.  Many sole proprietors, corporation or partnerships seek assistance in preparing, recording, summarizing, and reporting the financial activities of their businesses.  We lend our expertise to meet your accounting needs so you can focus your time and energy on strengthening your business.
@@ -44,28 +43,15 @@ const Business = () => {
         <p>
         Please contact us and we would be happy to discuss which level of assurance is appropriate for your company’s needs.
         </p>
-    </Content>  
+        <hr>
+        </hr>
+        <AniLink swipe direction="up" to="/">Go back to Home Page</AniLink>
+    </StyledContent>  
         
-    </Container>
+    </StyledContainer>
   )
 }
 
 export default Business
 
-const Container = styled.div`
- min-height:100vh;
- background:#fff;
- color:#fff;
-`
-const Heading = styled.div`
-   font-size: clamp(1.2rem, 5vw, 3rem);
-   text-align:center;
-   margin-top:1rem;
-   margin-bottom:2rem;
-   color:#008644;
-   text-shadow: 0px 2px 2px #222;
-   font-weight:bolder;
-`
-const Content = styled.div`
- color:#000;
-`
+

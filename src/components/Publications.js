@@ -1,6 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Link from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import {StyledContainer,StyledHeading,StyledContent} from "./StyledComponents"
+import { Table } from "react-bootstrap"
 import styled from "styled-components"
 
 const Publications = () => {
@@ -19,45 +22,39 @@ const Publications = () => {
 
  
   return (
-    <Container>
-      <Heading>Tax Forms and Publications</Heading>
-        <Content>
-            <table>
+    <StyledContainer>
+      <StyledHeading>Tax Forms and Publications</StyledHeading>
+        <StyledContent>
+            <SubP>
+            The publications listed below are located on the IRS Web site and require <Link to="https://get.adobe.com/reader/">Adobe Acrobat Reader</Link> to view. Visit the Adobe Web Site to install the latest version of Acrobat Reader.
+            Click a publication to view it online.
+            </SubP>
+            
+            <Table striped responsive>
                 <thead>
-                    <th>Glossary</th>
+                    <tr>
+                    <th><AniLink swipe direction="up" to="https://apps.irs.gov/app/vita/glossary.jsp">Glossary</AniLink></th>
                     <th>Description</th>
+                    </tr>
                 </thead>
                   <tbody>
                     {posts.nodes.map(post => (
                         <tr key={post.id}>
                             <td>
-                                <AniLink swipe direction="up" to={post.url}>{post.taxformalias}</AniLink></td>
+                                <AniLink swipe direction="up" to={post.url}>{post.taxformalias}</AniLink>
+                            </td>
                             <td>{post.description}</td>
                         </tr>
                     ))}
                 </tbody>
-            </table>
-        </Content>
-     </Container>
+            </Table>
+        </StyledContent>
+     </StyledContainer>
   )
 }
 
 export default Publications
 
-const Container = styled.div`
- min-height:100vh;
- background:#fff;
- color:#fff;
-`
-const Heading = styled.div`
-   font-size: clamp(1.2rem, 5vw, 3rem);
-   text-align:center;
-   margin-top:1rem;
-   margin-bottom:2rem;
-   color:#008644;
-   text-shadow: 0px 2px 2px #222;
-   font-weight:bolder;
-`
-const Content = styled.div`
- color:#000;
+const SubP = styled.p`
+  text-align: justify;
 `

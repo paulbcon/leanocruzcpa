@@ -6,7 +6,7 @@ import Publications from "../components/Publications"
 
 const PublicationPage = () => (
   <Layout>
-    <Seo title="Leano and Cruz, CPAs - Business Page" />
+    <Seo title="Leano and Cruz, CPAs - Tax Forms and Publications" />
     <Publications />
 
     <AniLink paintDrip to="/" duration={1} hex="#0d1f02">Go back to the homepage</AniLink>
