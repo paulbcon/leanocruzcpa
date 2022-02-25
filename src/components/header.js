@@ -7,6 +7,7 @@ import { menuData } from '../data/MenuData'
 import { Button } from "./Button"
 import { StaticImage } from "gatsby-plugin-image"
 
+/*Header containing Navigation*/
 const Header = ({toggle}) => {
   const [navbar,setNavbar] = useState(false)
 

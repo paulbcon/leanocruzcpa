@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import Dropdown from "./Dropdown"
-import Header from "./Header"
+import Header from "./header"
 import { GlobalStyle } from "./styles/GlobalStyles"
 
 const Layout = ({ children }) => {
