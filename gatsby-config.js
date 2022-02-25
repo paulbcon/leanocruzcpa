@@ -72,7 +72,7 @@ module.exports = {
       resolve: 'gatsby-source-graphcms',
         options: {
           // Your GraphCMS API endpoint. Available from your project settings.
-          endpoint: process.env.GRAPHCMS_ENDPOINT
+          endpoint: process.env.GATSBY_GRAPHCMS_ENDPOINT
         },
     },
 
