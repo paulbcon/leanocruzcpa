@@ -9,7 +9,7 @@ const Dropdown = ({isOpen, toggle}) => {
   return (
     <DropDownContainer isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
-        <CloseIcon />
+        <CloseIcon onClick={toggle} />
         </Icon>
         <DropDownWrapper>
             <DropDownMenu>
@@ -45,21 +45,20 @@ const DropDownContainer=styled.aside`
  left:0;
  transition: 0.3s ease-in-out;
  opacity: ${({isOpen}) => (isOpen ? "1": "0")};
- top: ${({isOpen}) => (isOpen ? "0": "-100")};
+ top: ${({isOpen}) => (isOpen ? "0": "-100%")};
 `
 const Icon=styled.div`
  position:absolute;
  top:1.2rem;
-right:1.5rem;
-background: transparent;
-font-size:2rem;
-cursor:pointer;
-outline:none;
+ right:1.5rem;
+ background: transparent;
+ font-size:2rem;
+ cursor:pointer;
+ outline:none;
 `
 
 const CloseIcon=styled(FaTimes)`
  color:goldenrod;
- z-index: 1001;
 `
 const DropDownWrapper=styled.div`
  color:goldenrod;

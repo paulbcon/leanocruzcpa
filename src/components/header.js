@@ -18,7 +18,7 @@ const Header = ({toggle}) => {
   },[])
   return (
     <Nav navbar={navbar}>
-      <Link to="/"><StaticImage src="../assets/images/logo2.png" width={100} height={100} /></Link>
+      <Link to="/"><StaticImage src="../assets/images/logo2.png" width={100} height={100} alt="Leano and Cruz, CPAs Logo" /></Link>
       <Bars onClick={toggle}/>
       <NavMenu>
         {menuData.map((item,index) => {
@@ -54,11 +54,8 @@ const Nav = styled.nav`
   display:flex;
   justify-content:space-between;
   padding:0.5rem calc((100vw - 1300px) /2);
-  z-index:1001;
   position:relative;
-  @media screen and (max-width:768px) {
-    z-index: 100;
-  }
+  z-index: 100;  
 
 `
 
@@ -76,8 +73,6 @@ const NavLink = styled(Link)`
   &:hover {
     color:goldenrod;
   }
-
-  
 
 `
 const Bars = styled(FaBars)`

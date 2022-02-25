@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Header />
+      <Header toggle={toggle} />
       
        <main>{children}</main>
     </>

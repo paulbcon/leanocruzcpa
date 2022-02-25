@@ -1,5 +1,4 @@
 import React from 'react'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents';
 
 const Business = () => {
@@ -45,7 +44,7 @@ const Business = () => {
         </p>
         <hr>
         </hr>
-        <AniLink swipe direction="up" to="/">Go back to Home Page</AniLink>
+        
     </StyledContent>  
         
     </StyledContainer>
