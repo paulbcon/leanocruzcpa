@@ -3,6 +3,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { CardGroup, Card } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents';
+import styled from 'styled-components';
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -59,13 +60,21 @@ function getServices(data) {
     <StyledContainer>
       <StyledHeading>Services</StyledHeading>
         <StyledContent>
+          <CardCenter>
           <CardGroup>
                   {getServices(data)}
           </CardGroup>
+          </CardCenter>
         </StyledContent>        
     </StyledContainer>
   )
 }
 
 export default Services
+
+const CardCenter = styled.div`
+ display:flex;
+ justify-content:center;
+ align-items:center;
+`
 
