@@ -5,11 +5,15 @@ import "@fontsource/eb-garamond"
 import Typewriter from "typewriter-effect"
 
 const Hero = () => {
-  
+   
   return (
     <HeroContainer>
       <HeroBg>
-        <VideoBg src={Video} type="video/mp4" loop muted autoPlay playsInline />
+        <VideoBg 
+        loop muted autoPlay playsInline
+        >
+          <source src={Video} type="video/mp4"  />
+         </VideoBg> 
       </HeroBg>
       <HeroContent>
         <HeroItems>
@@ -19,7 +23,7 @@ const Hero = () => {
             data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
             data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
           >
-            Leano and Cruz, CPAs
+            Leano & Cruz, CPAs
           </HeroH1>
           
           <HeroH2>
