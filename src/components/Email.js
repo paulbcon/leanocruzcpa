@@ -26,7 +26,7 @@ const Email = () => {
                      <input type="email" placeholder="Enter your email" id="email" name="email" />
                      <label htmlFor="message">Message:</label>
                      <textarea id="message" name="message" rows={5} cols={5}></textarea>
-                     <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} />
+                     <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
                      <Button round="true" type="submit">Send</Button>          
                      
                  </FormWrap>
