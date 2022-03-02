@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import EmailBg from '../assets/images/mailbox.jpg'
 import {Button} from "./Button"
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const Email = () => {
   return (
@@ -14,7 +15,10 @@ const Email = () => {
                    method="post" 
                    data-netlify="true"
                    data-netlify-honeypot="bot-field"
+                   data-netlify-recaptcha="true"
+                   action="/thank-you"
                    >
+                 <input type="hidden" name="form-name" value="contact" />      
                  <FormWrap>
                      <label htmlFor="yourname">Your Name:</label>
                      <input type="text" placeholder='Your Name' id="yourname" name="yourname" />
@@ -22,7 +26,8 @@ const Email = () => {
                      <input type="email" placeholder="Enter your email" id="email" name="email" />
                      <label htmlFor="message">Message:</label>
                      <textarea id="message" name="message" rows={5} cols={5}></textarea>
-                     <Button round="true">Send</Button>          
+                     <ReCAPTCHA sitekey="{process.env.GATSBY_RECAPTCHA_KEY}" />
+                     <Button round="true" type="submit">Send</Button>          
                      
                  </FormWrap>
              </form>

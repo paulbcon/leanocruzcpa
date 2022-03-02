@@ -18,7 +18,11 @@ export const StyledHeading = styled.div`
 export const StyledContent = styled.div`
   width:100%;
   padding: 0 20px;
-  color:#008644;
+  color:#000;
+
+  p {
+    text-align: justify;
+  }
 `
 
 
