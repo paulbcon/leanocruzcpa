@@ -1,9 +1,45 @@
-import React from 'react'
+import React,{useState,createRef} from 'react'
 import styled from 'styled-components'
 import EmailBg from '../assets/images/mailbox.jpg'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { navigate } from 'gatsby'
+
 
 const Email = () => {
+  const [state, setState] = useState({})
+  const recaptchaRef = createRef()
+  const [buttonDisabled, setButtonDisabled]  = useState(true)
+  
+  const handleChange = e => {
+      setState({...state, [e.target.name]: e.target.value})
+  }
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
+  const handleSubmit = e => {
+      e.preventDefault()
+      const form = e.target
+      const recaptchaValue = recaptchaRef.current.getValue()
+
+      fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+            'form-name': form.getAttribute('name'),
+            'g-recaptcha-response': recaptchaValue,
+            ...state,
+            }),
+      })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
+  }
   return (
     <>
      <EmailContainer>
@@ -13,24 +49,35 @@ const Email = () => {
              <form name="contact"
                    method="POST" 
                    data-netlify="true"
-                   data-netlify-honeypot="bot-field"
+                   netlify-honeypot="bot-field"
                    data-netlify-recaptcha="true"
                    action="/thank-you"
-                   >
+                   onSubmit={handleSubmit}
+             >
+             <noscript>
+                <p>This form won’t work with Javascript disabled</p>
+            </noscript>    
+
+                 <input type="hidden" name="bot-field" />      
                  <input type="hidden" name="form-name" value="contact" />      
                  <FormWrap>
                      <label htmlFor="yourname">Your Name:</label>
-                     <input type="text" placeholder='Your Name' id="yourname" name="yourname" />
-                     <label htmlFor="email">Email:</label>
-                     <input type="email" placeholder="Enter your email" id="email" name="email" />
+                     <input type="text" placeholder='Your Name' id="yourname" name="yourname" onChange={handleChange} required />
+                     <label htmlFor='email'>Email:</label>
+                     <input type="email" placeholder="Enter your email" id="email" name="email" onChange={handleChange} required />
                      <label htmlFor="message">Message:</label>
-                     <textarea id="message" name="message" rows={5} cols={5}></textarea>
-                     <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
+                     <textarea id="message" name="message" rows={5} cols={5} onChange={handleChange} required ></textarea>
+                     <ReCAPTCHA 
+                         ref={recaptchaRef}
+                         sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+                         size="normal"
+                         id="recaptcha-google"
+                         onChange={() => setButtonDisabled(false)}
+                         />
                      <ButtonWrap>
-                        <Button round="true" type="submit">Send</Button>          
+                        <Button round="true" type="submit" disabled={buttonDisabled}>Submit</Button>          
                      </ButtonWrap>
-                     
-                 </FormWrap>
+                </FormWrap>
              </form>
          </EmailContent>
      </EmailContainer>
