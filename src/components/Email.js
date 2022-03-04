@@ -46,10 +46,11 @@ const Email = () => {
          <EmailContent>
              <h1>For inquiries</h1>
              <p>Please leave your email and message here:</p>
-             <form name="contactform"
+             <form 
+                   name="contactform"
                    method="POST" 
                    data-netlify="true"
-                   data-netlify-honeypot="bot-field"
+                   netlify-honeypot="bot-field"
                    data-netlify-recaptcha="true"
                    action="/thank-you"
                    onSubmit={handleSubmit}
@@ -62,11 +63,11 @@ const Email = () => {
                  <input type="hidden" name="form-name" value="contactform" />      
                  <FormWrap>
                      <label htmlFor="yourname">Your Name:</label>
-                     <input type="text" placeholder='Your Name' id="yourname" name="yourname" onChange={handleChange} required />
+                     <input type="text" placeholder='Your Name' id="yourname" name="yourname" onChange={handleChange} aria-required="true" />
                      <label htmlFor='email'>Email:</label>
-                     <input type="email" placeholder="Enter your email" id="email" name="email" onChange={handleChange} required />
+                     <input type="email" placeholder="Enter your email" id="email" name="email" onChange={handleChange} aria-required="true" />
                      <label htmlFor="message">Message:</label>
-                     <textarea id="message" name="message" rows={5} cols={5} onChange={handleChange} required ></textarea>
+                     <textarea id="message" name="message" rows={5} cols={5} onChange={handleChange} aria-required="true" ></textarea>
                      <ReCAPTCHA 
                          ref={recaptchaRef}
                          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
