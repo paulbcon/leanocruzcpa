@@ -12,7 +12,7 @@ const Email = () => {
              <h1>For inquiries</h1>
              <p>Please leave your email and message here:</p>
              <form name="contact"
-                   method="post" 
+                   method="POST" 
                    data-netlify="true"
                    data-netlify-honeypot="bot-field"
                    data-netlify-recaptcha="true"
@@ -27,7 +27,9 @@ const Email = () => {
                      <label htmlFor="message">Message:</label>
                      <textarea id="message" name="message" rows={5} cols={5}></textarea>
                      <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
-                     <Button round="true" type="submit">Send</Button>          
+                     <ButtonWrap>
+                        <Button round="true" type="submit">Send</Button>          
+                     </ButtonWrap>
                      
                  </FormWrap>
              </form>
@@ -48,7 +50,7 @@ const EmailContainer = styled.div`
  ),    
  url(${EmailBg}) no-repeat center;
  background-size: cover;
- height:550px;
+ height:600px;
  width:100%;
  padding: 5rem calc((100vw - 1300px) /2);
  color:#fff;
@@ -114,4 +116,8 @@ const FormWrap = styled.div`
      }
  }
 `
-
+const ButtonWrap=styled.div`
+  display:flex;
+  align-items:center;
+  justify-content:center;
+`
