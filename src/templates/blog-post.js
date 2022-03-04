@@ -3,61 +3,59 @@ import { Link, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import {StyledHeading, StyledContent, StyledContainer} from "../components/StyledComponents"
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data, location, pageContext }) => {
   const post = data.graphCmsNewsletter
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const  { previous,next } = pageContext
 
-  
+      
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.title}
         description={post.preview}
       />
-      <h1>{post.title}</h1>
-        <p
-          style={{
-            ...-0.20,
-            display: `block`,
-            marginBottom: 1,
-            marginTop: -1
-          }}
-        >
+      <StyledContainer>
+      <StyledHeading>{post.title}</StyledHeading>
+        <StyledContent>
           {post.date}
-        </p>
-        <ReactMarkdown source={post.body} />
-        <hr
-          style={{
-            marginBottom: 1
-          }}
-        />
         
+       
+        <ReactMarkdown>{post.body}</ReactMarkdown>
+     
         <ul
           style={{
             display: `flex`,
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0
+            padding: 0,
+            color:'#ffffff'
           }}
         >
-          <li>
+          <li key={"prev"+post.id}>
             {previous && (
-              <Link to={previous.slug} rel="prev">
+              <Link to={`/newsletter/${previous.slug}`} rel="prev">
                 ← {previous.title}
               </Link>
             )}
           </li>
-          <li>
+          <li key={"next"+post.id}>
             {next && (
-              <Link to={next.slug} rel="next">
+              <Link to={`/newsletter/${next.slug}`} rel="next">
                 {next.title} →
               </Link>
             )}
           </li>
         </ul>
+
+        <hr/>
+        
+        
+        </StyledContent>
+        </StyledContainer>
     </Layout>
   )
 }

@@ -6,7 +6,7 @@ const OurTeam = () => {
 
   return (
     <StyledContainer>
-      <StyledHeading>Business Services</StyledHeading>
+      <StyledHeading>Our Team</StyledHeading>
       <StyledContent>
       <h4>Darius Cruz, CPA</h4>
        <p>

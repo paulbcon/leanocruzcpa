@@ -15,15 +15,23 @@ exports.createPages = ({ graphql, actions }) => {
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
   return graphql(
     `
-      {
-        allGraphCmsNewsletter {
-          edges {
-            node {
-              slug
-            }
+    {
+      allGraphCmsNewsletter {
+        edges {
+          next {
+            title
+            slug
+          }
+          previous {
+            title
+            slug
+          }
+          node {
+            slug
           }
         }
       }
+    }
     `
   ).then(result => {
     if (result.errors) {
@@ -33,11 +41,11 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allGraphCmsNewsletter.edges;
    
     posts.forEach((post, index) => {
-      const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
+     
+      const previous = post.previous;
+      const next = post.next;
       createPage({
-        path: post.node.slug,
+        path: `/newsletter/${post.node.slug}`,
         component: blogPost,
         context: {
           slug: post.node.slug,
