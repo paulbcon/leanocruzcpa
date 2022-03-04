@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import EmailBg from '../assets/images/mailbox.jpg'
-import {Button} from "./Button"
 import ReCAPTCHA from 'react-google-recaptcha'
 
 const Email = () => {
@@ -120,4 +119,22 @@ const ButtonWrap=styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
+`
+const Button=styled.button`
+background: ${({primary}) => (primary ? '#F26A2E': '#077BF1')};
+ white-space:nowrap;
+ padding: ${({ big }) => (big ? '16px 40px' : '10px 32px')};
+ color:#fff;
+ font-size: ${({ big }) => (big ? '20px' : '16px')};
+ outline:none;
+ border:none;
+ min-width:100px;
+ text-decoration:none;
+ transition:0.3s !important;
+ border-radius: ${({round}) => (round ? '50px': 'none')};
+
+ &:hover {
+     background: ${({primary}) => (primary ? '#077BF1' : '#F26A2E')};
+     transform: translateY(-2px);
+ }
 `
