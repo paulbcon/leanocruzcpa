@@ -46,10 +46,10 @@ const Email = () => {
          <EmailContent>
              <h1>For inquiries</h1>
              <p>Please leave your email and message here:</p>
-             <form name="contact"
+             <form name="contactform"
                    method="POST" 
                    data-netlify="true"
-                   netlify-honeypot="bot-field"
+                   data-netlify-honeypot="bot-field"
                    data-netlify-recaptcha="true"
                    action="/thank-you"
                    onSubmit={handleSubmit}
@@ -59,7 +59,7 @@ const Email = () => {
             </noscript>    
 
                  <input type="hidden" name="bot-field" />      
-                 <input type="hidden" name="form-name" value="contact" />      
+                 <input type="hidden" name="form-name" value="contactform" />      
                  <FormWrap>
                      <label htmlFor="yourname">Your Name:</label>
                      <input type="text" placeholder='Your Name' id="yourname" name="yourname" onChange={handleChange} required />
