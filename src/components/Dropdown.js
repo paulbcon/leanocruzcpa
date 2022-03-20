@@ -25,14 +25,25 @@ const Dropdown = ({isOpen, toggle}) => {
                 <Button primary="true" round="true" to="/contactus">
                     Contact Us
                 </Button>
-            </BtnWrap>    
+            </BtnWrap>  
+            
         </DropDownWrapper>
+        <DropDownFooter>
+        &copy; {new Date().getFullYear()} Leano & Cruz, CPAs
+        </DropDownFooter>
     </DropDownContainer>
   )
 }
 
 export default Dropdown
 
+const DropDownFooter=styled.footer`
+  display:flex;
+  color:#fff;
+  align-items: center;
+  justify-content: center;
+  font-family:"EB Garamond !important";
+`
 const DropDownContainer=styled.aside`
  position:fixed;
  z-index:999;
