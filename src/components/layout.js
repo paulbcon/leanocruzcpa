@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import Dropdown from "./Dropdown"
 import Header from "./header"
+import Footer from "./Footer"
 import { GlobalStyle } from "./styles/GlobalStyles"
 
 const Layout = ({ children }) => {
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
       <Header toggle={toggle} />
       
        <main>{children}</main>
+       <Footer />
     </>
   )
 }

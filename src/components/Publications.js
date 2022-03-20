@@ -9,7 +9,7 @@ import styled from "styled-components"
 const Publications = () => {
     const {posts} = useStaticQuery(graphql`
      {
-       posts: allGraphCmsTaxFormPublication {
+       posts: allGraphCmsTaxFormPublication(sort:{fields: taxformalias, order: ASC}) {
         nodes {
           id
           description

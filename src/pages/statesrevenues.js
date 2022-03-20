@@ -2,16 +2,17 @@ import * as React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import OurTeam from "../components/OurTeam";
+import StatesRevenues from "../components/StatesRevenues";
 import {FaHome} from 'react-icons/fa'
 
-const CompliancePage = () => (
+const StatesRevenuesPage = () => (
   <Layout>
-    <Seo title="Leano and Cruz, CPAs - Our Team Page" />
-    <OurTeam />
+    <Seo title="Leano and Cruz, CPAs - State Tax Forms and Information" />
+    <StatesRevenues />
 
     <AniLink paintDrip to="/" duration={1} hex="#0d1f02"><FaHome /> Home</AniLink>
   </Layout>
 )
 
-export default CompliancePage
+export default StatesRevenuesPage
+
