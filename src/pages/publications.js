@@ -9,9 +9,7 @@ const PublicationPage = () => (
   <Layout>
     <Seo title="Leano and Cruz, CPAs - Tax Forms and Publications" />
     <Publications />
-
-    <AniLink paintDrip to="/" duration={1} hex="#0d1f02"><FaHome /> Home</AniLink>
-  </Layout>
+ </Layout>
 )
 
 export default PublicationPage

@@ -19,7 +19,7 @@ const Header = ({toggle}) => {
   },[])
   return (
     <Nav navbar={navbar}>
-      <Link to="/"><StaticImage src="../assets/images/logo2.png" width={100} height={100} alt="Leano and Cruz, CPAs Logo" /></Link>
+      <AniLink swipe direction="up" to="/"><StaticImage src="../assets/images/logo2.png" width={100} height={100} alt="Leano and Cruz, CPAs Logo" /></AniLink>
       <Bars onClick={toggle}/>
       <NavMenu>
         {menuData.map((item,index) => {

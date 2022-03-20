@@ -8,9 +8,9 @@ import {FaHome} from 'react-icons/fa'
 const StatesRevenuesPage = () => (
   <Layout>
     <Seo title="Leano and Cruz, CPAs - State Tax Forms and Information" />
-    <StatesRevenues />
 
-    <AniLink paintDrip to="/" duration={1} hex="#0d1f02"><FaHome /> Home</AniLink>
+    <StatesRevenues />
+   
   </Layout>
 )
 

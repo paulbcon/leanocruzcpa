@@ -40,7 +40,7 @@ const DropDownContainer=styled.aside`
  height:100%;
  background:#005100;
  display:grid;
- align-items:center;
+ align-items:left;
  top:0;
  left:0;
  transition: 0.3s ease-in-out;
