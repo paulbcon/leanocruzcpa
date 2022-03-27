@@ -1,0 +1,39 @@
+fragment PreviousTaxRate on PreviousTaxRate {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  taxRate
+  incomeBracket
+  taxOwed
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  filercategory
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}
