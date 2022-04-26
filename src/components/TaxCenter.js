@@ -59,6 +59,11 @@ const TaxCenter = () => {
                     <td><AniLink swipe direction="up" to="https://www.ftb.ca.gov/file/when-to-file/due-dates-business.html">California Due Dates - Businesses</AniLink></td>
                     <td>State of California - Franchise Tax Board's Due Dates for Businesses</td>
                     </tr>
+                    <tr>
+                    <td><AniLink swipe direction="up" to="https://www.ftb.ca.gov/file/business/credits/pass-through-entity-elective-tax/index.html">California's PTE elective tax</AniLink></td>
+                    <td>State of California - Franchise Tax Board's Pass-through entity (PTE) elective tax</td>
+
+                    </tr>
                   </tbody>    
 
         </Table>    
