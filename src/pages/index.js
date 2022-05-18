@@ -7,7 +7,7 @@ import Email from "../components/Email"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Leano & Cruz, CPAs" />
     <Hero />
     <Services />
     <Email />

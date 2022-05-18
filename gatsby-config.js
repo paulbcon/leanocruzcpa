@@ -5,10 +5,11 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Leano and Cruz, CPAs`,
-    description: `Leano and Cruz,CPAs Website`,
+    title: `Leano & Cruz, CPAs`,
+    description: `Leano and Cruz,CPAs Tax and Accounting Website, Leano & Cruz, CPA Official Website`,
     author: `@paulbcon`,
     siteUrl: `https://leanoandcruz.com/`,
+    keywords: `Leano, Cruz, CPAs, California Tax, California Accountants, California Tax and Accounting, tax, accountants, taxes, accounting, business services, Leano and Cruz, Leano & Cruz, Leano and Cruz, CPAs, CPA in California`,
   },
   plugins: [
     {
