@@ -9,9 +9,10 @@ module.exports = {
     description: `Leano and Cruz,CPAs Tax and Accounting Website, Leano & Cruz, CPA Official Website`,
     author: `@paulbcon`,
     siteUrl: `https://leanoandcruz.com/`,
-    keywords: `Leano, Cruz, CPAs, California Tax, California Accountants, California Tax and Accounting, tax, accountants, taxes, accounting, business services, Leano and Cruz, Leano & Cruz, Leano and Cruz, CPAs, CPA in California`,
+    keywords: `Leano & Cruz CPA, Leano and Cruz CPA, California Tax, California Accountants, Tax and Accounting, accountants, taxes, accounting, business services`,
   },
   plugins: [
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
@@ -79,6 +80,5 @@ module.exports = {
         },
     },
     `gatsby-plugin-mdx`,    
-    `gatsby-plugin-advanced-sitemap`,
   ],
 }
