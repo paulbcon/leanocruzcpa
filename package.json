@@ -43,6 +43,9 @@
     "styled-components": "^5.3.3",
     "typewriter-effect": "^2.18.2"
   },
+  "resolutions": {
+    "@babel/core": "7.17.4"
+  },
   "devDependencies": {
     "prettier": "^2.5.1"
   },
