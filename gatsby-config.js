@@ -8,7 +8,7 @@ module.exports = {
     title: `Leano & Cruz, CPAs`,
     description: `Leano and Cruz,CPAs Tax and Accounting Website, Leano & Cruz, CPA Official Website`,
     author: `@paulbcon`,
-    siteUrl: `https://leanoandcruz.com/`,
+    siteUrl: `https://leanocruzcpa.com/`,
     keywords: `Leano & Cruz CPA, Leano and Cruz CPA, California Tax, California Accountants, Tax and Accounting, accountants, taxes, accounting, business services`,
   },
   plugins: [
