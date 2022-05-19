@@ -78,7 +78,6 @@ module.exports = {
           buildMarkdownNodes: true,
         },
     },
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-mdx`,    
   ],
 }
