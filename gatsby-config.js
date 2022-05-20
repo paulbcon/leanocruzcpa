@@ -68,9 +68,14 @@ module.exports = {
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#a2466c`,
         display: `minimal-ui`,
         icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
+        icon_options: {
+          // For all the options available,
+          // please see the section "Additional Resources" below.
+          purpose: `any maskable`,
+        },
       },
     },
     `gatsby-plugin-offline`,
@@ -96,7 +101,9 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{userAgent: '*'}]
+            policy: [{userAgent: '*'}],
+            sitemap:'https://leanocruzcpa.com/sitemap.xml',
+            host:'https://leanocruzcpa.com',
           },
           'branch-deploy': {
             policy: [{userAgent: '*', disallow: ['/']}],
