@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Video from "../assets/videos/1.mp4"
+import Video from "../assets/videos/2.mp4"
 import "@fontsource/eb-garamond"
 import Typewriter from "typewriter-effect"
 
