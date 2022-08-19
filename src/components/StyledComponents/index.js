@@ -25,6 +25,17 @@ export const StyledContent = styled.div`
   }
 `
 
+export const StyledAnnouncement = styled.div`
+  font-size: clamp(1rem, 2vw, 1rem);
+  text-align:center;
+  margin-top:1rem;
+  margin-bottom:2rem;
+  background-color:#000;
+  color:#FFF; 
+  text-shadow: 0px 2px 2px #D34B08;
+  font-weight:bolder;
+`
+
 
 
 
