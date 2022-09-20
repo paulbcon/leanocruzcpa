@@ -37,7 +37,7 @@ const Newsletter = ({ data, location }) => {
         <StyledHeading>Newsletters</StyledHeading>
         <StyledContent>
           <ol style={{ listStyle: `none` }}>
-            {posts.map(({ node }) => {
+            {posts.reverse().map(({ node }) => {
               const title = node.title || node.slug
               return (
                 <div key={node.id}>
