@@ -10,7 +10,7 @@ const Footer = () => {
         <FooterLinksWrapper>
             <FooterDesc>
                 <h2><HomeLink to="/">Leano & Cruz, CPAs</HomeLink></h2>
-                <p><strong>Office Address:</strong></p>
+                <p><strong>Office and Mailing Address:</strong></p>
                 <p>Regus Trillium Towers</p>
                 <p>6320 Canoga Ave., Fl. 15</p>
                 <p>Woodland Hills, CA 91367</p>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <p>Saturday: 9am - 1pm PT</p>
                 <br>
                 </br>
-                <p><strong>Mailing Address:</strong></p>
+                <p><strong>P.O. Box Mailing Address:</strong></p>
                 <p>21200 W Oxnard St. #6590</p>
                 <p>Woodland Hills, CA 91367</p>
                 <br></br>
