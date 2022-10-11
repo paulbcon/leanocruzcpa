@@ -1,11 +1,12 @@
 import React from 'react'
-import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents';
+import { StyledContainer, StyledHeading, StyledContent, PricingSubTitle } from './StyledComponents';
 
 const Tax = () => {
 
   return (
     <StyledContainer>
       <StyledHeading>Tax Services</StyledHeading>
+      <PricingSubTitle>Starting at <strong>$300-Individual | $800-Corporation/LLC</strong></PricingSubTitle>
       <StyledContent>
       <p>
         Our tax services include corporate (C and S Corporations), 

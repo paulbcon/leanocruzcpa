@@ -36,6 +36,9 @@ export const StyledAnnouncement = styled.div`
   font-weight:bolder;
 `
 
-
-
+export const PricingSubTitle = styled.div`
+ color: #008644;
+ margin-bottom: 1em;
+ margin-left:1em;
+`
 

@@ -1,11 +1,12 @@
 import React from 'react'
-import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents';
+import { StyledContainer, StyledHeading, StyledContent, PricingSubTitle } from './StyledComponents';
 
 const Compliance = () => {
 
   return (
     <StyledContainer>
       <StyledHeading>Tax Compliance Services</StyledHeading>
+      <PricingSubTitle>Starting at <strong>$80/hour</strong></PricingSubTitle>
       <StyledContent>
       
       <p>Our tax compliance services cover the other filing requirements of the State of California.  We can assist in the preparation and filing of the quarterly sales tax return, annual or biennial Statement of Information with the CA Secretary of State, and City business license application/renewal.</p>

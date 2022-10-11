@@ -1,11 +1,12 @@
 import React from 'react'
-import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents';
+import { StyledContainer, StyledHeading, StyledContent,PricingSubTitle } from './StyledComponents';
 
 const Business = () => {
 
   return (
     <StyledContainer>
       <StyledHeading>Business Services</StyledHeading>
+      <PricingSubTitle>Starting at <strong>$250/month</strong></PricingSubTitle>
       <StyledContent>
       <h4>Outsourced Accounting/Write-up Services</h4>
         <p>
@@ -52,5 +53,3 @@ const Business = () => {
 }
 
 export default Business
-
-

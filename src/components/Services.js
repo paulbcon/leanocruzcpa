@@ -23,6 +23,7 @@ const Services = () => {
           }
         }
         alt
+        startprice
         link
       }
     }
@@ -40,6 +41,7 @@ function getServices(data) {
                 alt={item.node.alt} />
               <Card.Body>
                 <Card.Title><h2>{item.node.title}</h2></Card.Title>
+                <CardSubTitle>Starting at <strong>{item.node.startprice}</strong></CardSubTitle>
                 <Card.Text>
                 {item.node.text}
                 </Card.Text>
@@ -77,4 +79,6 @@ const CardCenter = styled.div`
  justify-content:center;
  align-items:center;
 `
-
+const CardSubTitle = styled.div`
+ color: color: #008644;
+`
