@@ -5,8 +5,8 @@ import {StyledAnnouncement} from './StyledComponents';
 const Announcement = () => {
     return (
         <StyledAnnouncement>
-            We are happy to announce that our new office will be located at 6320 Canoga Ave. Fl. 15, Woodland Hills, CA 91367 starting 
-            August 24, 2022.
+            IRS:California storm victims qualify for tax relief; April 18 deadline,other dates extended to May 15. 
+            <a href="https://www.irs.gov/newsroom/irs-california-storm-victims-qualify-for-tax-relief-april-18-deadline-other-dates-extended-to-may-15">Read more...</a>
         </StyledAnnouncement>
     )
 }
