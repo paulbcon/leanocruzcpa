@@ -19,6 +19,11 @@ const Footer = () => {
                 <p>Saturday: 9am - 1pm PT</p>
                 <br>
                 </br>
+                <p>25350 Magic Mountain Parkway, Suite 300</p>
+                <p>Valencia, CA 91355</p>
+                <br>
+                </br>
+                
                 <p><strong>P.O. Box Mailing Address:</strong></p>
                 <p>21200 W Oxnard St. #6590</p>
                 <p>Woodland Hills, CA 91367</p>

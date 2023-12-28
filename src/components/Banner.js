@@ -5,8 +5,7 @@ import {StyledAnnouncement} from './StyledComponents';
 const Announcement = () => {
     return (
         <StyledAnnouncement>
-            IRS:California storm victims qualify for tax relief; April 18 deadline,other dates extended to May 15. 
-            <a href="https://www.irs.gov/newsroom/irs-california-storm-victims-qualify-for-tax-relief-april-18-deadline-other-dates-extended-to-may-15">Read more...</a>
+            Additional Office Address: 25350 Magic Mountain PKWY, Suite 300, Valencia, CA 91355           
         </StyledAnnouncement>
     )
 }
