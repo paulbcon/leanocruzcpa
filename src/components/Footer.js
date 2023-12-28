@@ -21,6 +21,9 @@ const Footer = () => {
                 </br>
                 <p>25350 Magic Mountain Parkway, Suite 300</p>
                 <p>Valencia, CA 91355</p>
+                <p><strong>Office Hours:</strong></p>
+                <p>Monday to Friday: 9am - 5pm PT</p>
+                <p>Saturday: 9am - 1pm PT</p>
                 <br>
                 </br>
                 
