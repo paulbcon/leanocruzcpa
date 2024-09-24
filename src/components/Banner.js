@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {FaPhone} from 'react-icons/fa'
 import {StyledAnnouncement} from './StyledComponents';
 
 const Announcement = () => {
