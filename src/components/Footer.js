@@ -19,9 +19,6 @@ const Footer = () => {
                 <br>
                 </br>
                 
-                <p><strong>P.O. Box Mailing Address:</strong></p>
-                <p>21200 W Oxnard St. #6590</p>
-                <p>Woodland Hills, CA 91367</p>
                 <br></br>
                 <p><a href="tel:8183782485"> <FaPhone /> (818) 378-2485</a></p>
                 <p><FooterLink to="https://www.facebook.com/leanocruzcpa"><FaFacebook /> Leano & Cruz, CPAs </FooterLink></p>
