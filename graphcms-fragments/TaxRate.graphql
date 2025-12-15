@@ -6,7 +6,6 @@ fragment TaxRate on TaxRate {
   publishedAt
   taxRate
   incomeBracket
-  taxOwed
   createdBy {
     ... on User {
       remoteTypeName: __typename
