@@ -3,13 +3,12 @@ import { Table } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import { StyledContainer, StyledHeading, StyledContent } from './StyledComponents'
 
-const TaxRates2021 = () => {
+const TaxRates2026 = () => {
 
 const {posts} = useStaticQuery(graphql`
     {
-    posts: allGraphCmsPreviousTaxRate {
+    posts: allGraphCmsTaxRate {
     nodes {
-      taxOwed
       taxRate
       incomeBracket
       filercategory
@@ -21,7 +20,7 @@ const {posts} = useStaticQuery(graphql`
 
   return (
     <StyledContainer>
-    <StyledHeading>2021 Federal Income Tax Brackets</StyledHeading>
+    <StyledHeading>2026 Federal Income Tax Brackets</StyledHeading>
       <StyledContent>
       <h4><strong>How to get into a lower tax bracket and pay a lower federal income tax rate</strong></h4>    
       <p>Two common ways of reducing your tax bill are credits and deductions.</p>
@@ -46,7 +45,7 @@ const {posts} = useStaticQuery(graphql`
         <tr>
             <th>Tax Rate</th>
             <th>Taxable income bracket</th>
-            <th>Tax owed</th>
+      
         </tr>
      </thead>
      <tbody>
@@ -55,7 +54,7 @@ const {posts} = useStaticQuery(graphql`
         <tr key={post.id}>
             <td>{post.taxRate}</td>
             <td>{post.incomeBracket}</td>
-            <td>{post.taxOwed}</td>
+      
         </tr>
      ))}
      </tbody>
@@ -68,7 +67,7 @@ const {posts} = useStaticQuery(graphql`
         <tr>
             <th>Tax Rate</th>
             <th>Taxable income bracket</th>
-            <th>Tax owed</th>
+      
         </tr>
      </thead>
      <tbody>
@@ -77,7 +76,7 @@ const {posts} = useStaticQuery(graphql`
         <tr key={post.id}>
             <td>{post.taxRate}</td>
             <td>{post.incomeBracket}</td>
-            <td>{post.taxOwed}</td>
+      
         </tr>
      ))}
      </tbody>
@@ -90,7 +89,7 @@ const {posts} = useStaticQuery(graphql`
         <tr>
             <th>Tax Rate</th>
             <th>Taxable income bracket</th>
-            <th>Tax owed</th>
+      
         </tr>
      </thead>
      <tbody>
@@ -99,7 +98,7 @@ const {posts} = useStaticQuery(graphql`
         <tr key={post.id}>
             <td>{post.taxRate}</td>
             <td>{post.incomeBracket}</td>
-            <td>{post.taxOwed}</td>
+      
         </tr>
      ))}
      </tbody>
@@ -112,7 +111,7 @@ const {posts} = useStaticQuery(graphql`
         <tr>
             <th>Tax Rate</th>
             <th>Taxable income bracket</th>
-            <th>Tax owed</th>
+      
         </tr>
      </thead>
      <tbody>
@@ -121,7 +120,7 @@ const {posts} = useStaticQuery(graphql`
         <tr key={post.id}>
             <td>{post.taxRate}</td>
             <td>{post.incomeBracket}</td>
-            <td>{post.taxOwed}</td>
+      
         </tr>
      ))}
      </tbody>
@@ -134,4 +133,4 @@ const {posts} = useStaticQuery(graphql`
   )
 }
 
-export default TaxRates2021
+export default TaxRates2026

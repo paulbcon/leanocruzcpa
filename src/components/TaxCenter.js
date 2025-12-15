@@ -39,12 +39,12 @@ const TaxCenter = () => {
                         <td>Taxes-States-Departments of Revenue Links</td>
                     </tr>
                     <tr>
-                      <td><AniLink swipe direction="up" to="/taxrates2022">2022 Federal Income Tax Brackets </AniLink> </td>
-                      <td>2022 Federal Income Tax Brackets (for taxes due in April 2023)</td>
+                      <td><AniLink swipe direction="up" to="/taxrates2026">2026 Federal Income Tax Brackets </AniLink> </td>
+                      <td>2026 Federal Income Tax Brackets (for taxes due in April 2027)</td>
                     </tr>
                     <tr>
-                      <td><AniLink swipe direction="up" to="/taxrates2021">2021 Federal Income Tax Brackets </AniLink> </td>
-                      <td>2021 Federal Income Tax Brackets (for taxes due in April 2022)</td>
+                      <td><AniLink swipe direction="up" to="/taxrates2025">2025 Federal Income Tax Brackets </AniLink> </td>
+                      <td>2025 Federal Income Tax Brackets (for taxes due in April 2026)</td>
                     </tr>
                     <tr>
                       <td><AniLink swipe direction="up" to="https://sa.www4.irs.gov/irfof/lang/en/irfofgetstatus.jsp">Where's My Refund</AniLink></td>
