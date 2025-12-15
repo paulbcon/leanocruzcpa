@@ -39,13 +39,13 @@ const TaxCenter = () => {
                           OBBBA</AniLink>
                       </td>
                       <td>One Big, Beautiful Bill Act related news and information</td>
-
-                      <td><AniLink swipe direction="up" to="https://www.irs.gov/retirement-plans">
+                    </tr>
+                    <tr>
+                    <td><AniLink swipe direction="up" to="https://www.irs.gov/retirement-plans">
                           Retirement plans</AniLink>
                       </td>
                       <td>Tax-advantaged retirement plans and Individual Retirement Arrangements(IRAs)</td>
-
-                    </tr>
+                    </tr>  
                     <tr>
                         <td><AniLink swipe direction="up" to="/statesrevenues">50 States Department of Revenue</AniLink></td>
                         <td>Taxes-States-Departments of Revenue Links</td>
